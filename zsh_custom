@@ -1,0 +1,25 @@
+# Path to your Oh My Zsh installation.
+export ZSH="${HOME}/.oh-my-zsh"
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+zstyle ':omz:update' mode disabled  # disable automatic updates
+
+plugins=(
+  fast-syntax-highlighting
+  git
+  python
+  you-should-use
+  zsh-autocomplete
+  zsh-autosuggestions
+  zsh-bat
+  zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# vim mode
+set -o vi
+
+# Env
+export PATH=${HOME}/.local/bin:${PATH}
