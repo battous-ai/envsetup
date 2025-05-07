@@ -23,3 +23,11 @@ set -o vi
 
 # Env
 export PATH=${HOME}/.local/bin:${PATH}
+
+# To cycle through menu with tab for zsh-autocomplete
+bindkey              '^I'         menu-complete
+bindkey "$terminfo[kcbt]" reverse-menu-complete
+
+# To cycle through history
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
